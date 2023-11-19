@@ -5,7 +5,7 @@ app = Flask(__name__)
 
 @app.route('/weather', methods=['GET'])
 def get_weather():
-    api_key = os.environ.get('WEATHER_API_KEY')
+    api_key = os.environ.get('apiKey')
     city = request.args.get('city')
 
     if not city:
